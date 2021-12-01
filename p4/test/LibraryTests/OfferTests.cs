@@ -62,5 +62,7 @@ namespace Ucu.Poo.Defense.Tests
             Offer Offer = new Offer(DateTime.Today);
             Assert.That(() => Offer.AddDiscount(1), Throws.TypeOf<ArgumentException>());            
         }
+
+        
     }
 }

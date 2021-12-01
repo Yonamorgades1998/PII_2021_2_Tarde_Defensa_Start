@@ -33,5 +33,15 @@ namespace Ucu.Poo.Defense
         {
             this.items.Remove(item);
         }
+
+        public string AsText(){
+            string response = "";
+            // 1 de 'Caja de cartón' a $23
+            foreach (OfferItem item in this.Items)
+            {
+                response += item.Quantity + " " + item.Residue.Name + " a " + item.Price;
+            }
+            return response;
+        }
     }
 }

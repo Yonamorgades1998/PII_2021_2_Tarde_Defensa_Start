@@ -2,20 +2,23 @@ using System;
 
 namespace Ucu.Poo.Defense
 {
-    public class PromoCode
+    public class PromoCode:IOfferItem
+
     {
+        public int Price { get; set; }
+        public Residue Residue { get ; set;}
         private string code {get;set;}
-        private int amount;
+        public int Quantity { get; set; }
 
         public int SubTotal
         {
             get
             {
-                return this.amount;
+                return this.Quantity;
             }
             set
             {
-                this.amount = value;
+                this.Quantity = value;
             }
         }
 
